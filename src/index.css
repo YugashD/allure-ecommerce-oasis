@@ -1,0 +1,63 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Bootstrap import - should come before Tailwind imports */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #f8bbd0;
+  --secondary-color: #6a1b9a;
+  --accent-color: #ce93d8;
+  --light-bg: #fce4ec;
+  --text-dark: #333333;
+  --text-light: #ffffff;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: var(--text-dark);
+}
+
+.main-container {
+  min-height: calc(100vh - 180px); /* Adjust based on navbar and footer height */
+}
+
+/* Custom button styles */
+.btn-primary-custom {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--text-light);
+}
+
+.btn-primary-custom:hover {
+  background-color: #5d1787;
+  border-color: #5d1787;
+}
+
+.btn-secondary-custom {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--text-dark);
+}
+
+.btn-secondary-custom:hover {
+  background-color: #f59eb7;
+  border-color: #f59eb7;
+}
+
+/* Card customization */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
